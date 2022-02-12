@@ -1,4 +1,4 @@
-body{
+#fondo{
     background-color: beige;
 }
 
@@ -12,12 +12,29 @@ h1{
     font-size: 30px;
     color: black;
     font-style: normal;
-    font: bold;
+    font-weight: bold;
 }
+
+h3{
+    font-weight: bolder;
+    color: darkslategray;
+    font-size:30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 ol{
     color:lightslategray;
     font-size: 22px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: -32px;
+}
+li{
+    margin-left: 40px;
+}
 
+#contenido_principal .row{
+    border: 1px solid black;
+    margin-right: 0;
+    margin-left: 0;
 }

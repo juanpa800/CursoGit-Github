@@ -1,46 +1,319 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link href="css/styles.css" rel="stylesheet" type="text/css">
-        <script src="js/scripts.js" type="text/javascript"></script>
-        <title> Aprendiendo Git y Github </title>
-        
-    </head>
-    <body>
-        <h1>Haciendo pruebas para conocer git y github</h1>
-        <p>Este trabajo se está haciendo con fines educativos propios,
-            los cuales me permitirán aprender git y github
-        </p>
-        <hr>
-        <input type="button" onclick="saludar()" value="Saluditos">
-        <div>
-            <h2><b>Comandos vistos y aprendidos:</b></h2>
-            <ol>
-                <li><p>git init</p></li>
-                <li><p>git status</p></li>
-                <li><p>git status -s</p></li>
-                <li><p>git config global user.username "name"</p></li>
-                <li><p>git config global user.email "email"</p></li>
-                <li><p>git config -l</p></li>
-                <li><p>git add &lt;file&gt;</p></li>
-                <li><p>git add .</p></li>
-                <li><p>git commit -m "mensaje del commit"</p></li>
-                <li><p>git log --oneline</p></li>
-                <li><p>git reset --head &lt;ID del commit&gt;</p></li>
-                <li><p>git commit --amend</p></li>
-                <li><p>git push origin master</p></li>
-                <li><p>git pull</p></li>
-                <li><p>git tag &lt;nomre del tag&gt; -m "mensaje"</p></li>
-                <li><p>git push --tags</p></li>
-                <li><p>git clone &lt;URL&gt;</p></li>
-                <li><p>git branch &lt;nombre&gt;</p></li>
-                <li><p>git branch</p></li>
-                <li><p>git checkout &lt;nombre rama&gt;</p></li>
-                <li><p>git merge &lt;rama a fusionar&gt;</p></li>
-                <li><p>git branch -d &lt;nombre rama a borrar&gt;</p></li>
-            </ol>
+
+<head>
+    <meta charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title> Aprendiendo Git y Github </title>
+
+</head>
+
+<body class="mt-5" id="fondo">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm text-center">
+                <h1>Haciendo pruebas para conocer git y github</h1>
+            </div>
         </div>
 
-    </body>
+        <div class="row">
+            <div class="col-sm text-center">
+                <p>Este trabajo se está haciendo con fines educativos propios,
+                    los cuales me permitirán aprender git y github
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row mt-5">
+            <div class="col text-center">
+                <input type="button" onclick="saludar()" value="Saluditos">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2><b>Comandos vistos y aprendidos:</b></h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-sm" id="contenido_principal">
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <h3>Comando</h3>
+            </div>
+            <div class="col-sm-6 text-center" >
+                <h3>Función</h3>
+            </div>
+        </div>
+        <ol>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git init</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Inicia el proyecto, indica que la carpeta sera el origen de un proyecto.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git status</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Muestra los cambios SOLO los realizados dentro del proyecto lo que permite
+                        ver si se hicieron modificaciones desde el ultimo commit,
+                        si un archivo ya se hizo git add entonces no se muestra, excepto si se usa
+                        el siguiente comando.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold fw-bold">
+                    <li>
+                        <p>git status -s</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Con git status -s Podemos visualizar TODOS los archivos del root y las carpetas,
+                        si la carpeta o archivo tiene un verde es que todo su contenido está salvado, y
+                        rojo es que aún no se salva.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git config global user.username "name"</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Configuración del nombre del propietario del proyecto.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git config global user.email "email"</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Configuración del email del propietario del proyecto.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git config -l</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Muestra como está configurada la información del proyecto.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git add &lt;file&gt;</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Salva un archivo modificado enviándolo al Staging Area</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git add .</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Envía todos los archivos modificados al Staging Area</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git commit -m "mensaje del commit"</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Realiza un commit, enviando todo nuestro staging area a local y guardando esta versión del proyecto.
+                        <br>
+                        Si es la primera vez que se realiza toca configurar el username y el email con git config global
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git log --oneline</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Permite ver todos los commits realizados.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git reset --head &lt;ID del commit&gt;</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Permite restaurar el proyecto a un commit anterior.<br>
+                        NOTA: Se perderán los commits hasta donde se decida regresar.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git commit --amend</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Cambia la descripción del último commit realizado 
+                        usando VIM en la consola git bash</p>
+                    <p>
+                        :i modo edición<br>
+                        Borrar esa descripción antigua<br>
+                        Esc <br>
+                        Luego comenzar a escribir<br>
+                        Esc nuevamente<br>
+                        :wq comando para guardar y salir
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git remote add origin &lt;URL&gt;</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Enlaza el proyecto en github previamente creado con el repositorio del proyecto</p>
+                    <p>probablemente tengas que hacer <b>git push -u origin master</b></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git push origin master</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Envía mis cambios de local a mi repositorio en remoto en github.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git pull</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Envía los cambios de remoto a mi repositorio local.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git tag &lt;nombre del tag&gt; -m "mensaje"</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>	Crea un tag EN LOCAL<br>
+                        <b>Tag:</b> versión alguna del proyecto 100% utilizable dentro de lo que contiene.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git push --tags</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Sube el tag al repositorio en remoto</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git clone &lt;URL&gt;</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Crea una copia del proyecto de la rama master del link</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git branch &lt;nombre&gt;</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Crea una rama con el nombre a partir del punto en el que está el proyecto</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git branch</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Muestra las ramas del proyecto y señala la rama en la que estamos ubicados</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git checkout &lt;nombre rama&gt;</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Sirve para moverse entre ramas.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git merge &lt;rama a fusionar&gt;</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Parados en la rama a la que queremos llevar los cambio, utilizamos 
+                        este código para hacer merge con la rama descrita arriba, 
+                        en caso de presentar conflictos se informará</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 fw-bold">
+                    <li>
+                        <p>git branch -d &lt;nombre rama a borrar&gt;</p>
+                    </li>
+                </div>
+                <div class="col-sm-12 col-md-6 text-justify">
+                    <p>Borra la rama indicada, se recomienda hacer esto una vez que se hace merge exitosamente</p>
+                </div>
+            </div>
+        </ol>
+    </div>
+
+</body>
+
 </html>

@@ -1,4 +1,4 @@
 function saludar(){
-    let x = prompt("indica tu nombre");
-    alert(`hola ${x}`);
+    let x = prompt("Escribe tu nombre");
+    alert(`Bienvenido ${x}, espero que este contenido te sirva.`);
 }
